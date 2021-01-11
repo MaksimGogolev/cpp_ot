@@ -9,8 +9,6 @@ script:
 - cmake --build .
 - cmake --build . --target test
 - cmake --build . --target package
-before_deploy:
-- cd ./01
 deploy:
   provider: script
   skip_cleanup: true
