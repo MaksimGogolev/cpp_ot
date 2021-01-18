@@ -1,6 +1,6 @@
 language: cpp
 before_script:
-- cd ./01
+- cd ./01_2
 - sudo apt-get install libboost-test-dev -y
 - echo "deb http://archive.ubuntu.com/ubuntu xenial main universe" | sudo tee -a /etc/apt/sources.list
 - sudo apt-get update -qq
@@ -13,6 +13,6 @@ deploy:
   provider: script
   skip_cleanup: true
   script:
-  - curl -T helloworld-0.0.$TRAVIS_BUILD_NUMBER-Linux.deb -umaks:$BINTRAY_API_KEY "https://api.bintray.com/content/maks/Deb_cpp_ot/d/$TRAVIS_BUILD_NUMBER/helloworld-0.0.$TRAVIS_BUILD_NUMBER-Linux.deb;deb_distribution=trusty;deb_component=main;deb_architecture=amd64;publish=1"
+  - curl -T ip4_filter-0.0.$TRAVIS_BUILD_NUMBER-Linux.deb -umaks:$BINTRAY_API_KEY "https://api.bintray.com/content/maks/Deb_cpp_ot/ip4/$TRAVIS_BUILD_NUMBER/ip4_filter-0.0.$TRAVIS_BUILD_NUMBER-Linux.deb;deb_distribution=trusty;deb_component=main;deb_architecture=amd64;publish=1"
   on:
     all_branches: true
