@@ -1,14 +1,12 @@
 #pragma once
 
 #include <tuple>
+#include <array>
 #include <set>
 #include <iostream>
 
 struct ip4{
-    int one;
-    int two;
-    int three;
-    int four;
+    std::array<int, 4> ip;
     friend bool operator<(const ip4& lhs, const ip4& rhs);
 };
 
@@ -20,12 +18,12 @@ std::istream& operator>>(std::istream& in, ip4& ip);
 
 class ip4_handler {
 public:
-    ip4_handler(){};
+    ip4_handler() = default;
 //    void storeIP(const ip4& ip);
     bool storeIP(std::istream& in);
-    std::set<ip4>& getStorage();
+    std::multiset<ip4>& getStorage();
 private:
-    std::set<ip4> storage;
+    std::multiset<ip4> storage;
 };
 
 

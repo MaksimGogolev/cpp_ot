@@ -19,7 +19,7 @@ BOOST_AUTO_TEST_CASE(test_valid_version)
                        "222.82.198.61\t text2 \t text3\n"
                        "1.70.44.170\t text2 \t text3\n"
                        "1.29.168.152\t text2 \t text3\n"
-                       "1.1.234.8\t text2 \t text3";
+                       "1.1.234.8\t text2 \t text3\n ";
     std::stringstream stream(str1);
     ip4_handler handler;
     std::string tmpString;
